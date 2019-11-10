@@ -55,7 +55,7 @@ public class CSVModifierTest {
         File expected = new File(expectedOutputFilename);
 
         try {
-            Assertions.assertTrue(FileUtils.contentEquals(test, expected), "File was not updated as expected!");
+            Assertions.assertTrue(FileUtils.contentEqualsIgnoreEOL(test, expected, null), "File was not updated as expected!");
 
         } catch (IOException e) {
             e.printStackTrace();
